@@ -23,16 +23,6 @@ namespace ProductApi.Controllers
             return await _context.Materials.ToListAsync();
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Material>> GetMaterial(int id)
-        {
-            var material = await _context.Materials.FindAsync(id);
-
-            if (material == null) return NotFound();
-
-            return material;
-        }
-
         // POST Запрос: api/MaterialsData
         [HttpPost]
         public async Task<ActionResult<Material>> PostMaterial(Material material)

@@ -1,0 +1,39 @@
+﻿@page
+@model ProductWeb.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Удаление материала";
+}
+
+<h2>Удаление материала</h2>
+
+<h3>Вы уверены, что хотите удалить этот материал?</h3>
+<div>
+    <h4>Материал</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Material.Material_ID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Material.Material_ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Material.Material_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Material.Material_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Material.Material_Cost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Material.Material_Cost)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Material.Material_ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index" class="btn btn-secondary">Назад к списку</a>
+    </form>
+</div>
