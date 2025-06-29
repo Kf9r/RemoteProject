@@ -13,6 +13,6 @@ REM Ждем 5 секунд для запуска Web
 timeout /t 5 /nobreak >nul
 
 REM Открываем Chrome
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://localhost:7166/"
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://localhost:7019/"
 
 exit
