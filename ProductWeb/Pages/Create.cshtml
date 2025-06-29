@@ -1,0 +1,19 @@
+﻿@page
+@model ProductWeb.Pages.CreateModel
+@{
+    ViewData["Title"] = "Создание материала";
+}
+
+<h2>Создание нового материала</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Material.Material_Name" class="control-label"></label>
+        <input asp-for="Material.Material_Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Material.Material_Cost" class="control-label"></label>
+        <input asp-for="Material.Material_Cost" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Создание</button>
+</form>

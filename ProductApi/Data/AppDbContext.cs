@@ -11,7 +11,7 @@ namespace ProductApi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Material>().ToTable("Materials"); 
+            modelBuilder.Entity<Material>().ToTable("Material"); 
 
             modelBuilder.Entity<Material>(entity =>
             {
